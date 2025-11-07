@@ -1,0 +1,2833 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.1003.1601                               -->
+<workbook original-version='18.1' source-build='2025.2.4 (20252.25.1003.1601)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Hechos_2019_2023_diccionario' inline='true' name='federated.14455c80plmio61ehiwja04vz80x' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Hechos_2019_2023_diccionario' name='textscan.0uv1rhu19krw8n12puftw0eoam47'>
+            <connection class='textscan' directory='C:/Users/Usuario/Documents/GitHub/Lab12_DS/working_dir' filename='Hechos_2019_2023_diccionario.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Vehiculos_2019_2023_diccionario' name='textscan.108a8kb0uqrpes11d220h1h3yjwt'>
+            <connection class='textscan' directory='C:/Users/Usuario/Documents/GitHub/Lab12_DS/working_dir' filename='Vehiculos_2019_2023_diccionario.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Fallecidos_2019_2023_diccionario' name='textscan.12138sn1xt15js10uxmrt0jqx12q'>
+            <connection class='textscan' directory='C:/Users/Usuario/Documents/GitHub/Lab12_DS/working_dir' filename='Fallecidos_2019_2023_diccionario.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.0uv1rhu19krw8n12puftw0eoam47' name='Hechos_2019_2023_diccionario.csv' table='[Hechos_2019_2023_diccionario#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='num_corre' ordinal='0' />
+              <column datatype='integer' name='ano_ocu' ordinal='1' />
+              <column datatype='integer' name='dia_ocu' ordinal='2' />
+              <column datatype='integer' name='hora_ocu' ordinal='3' />
+              <column datatype='string' name='g_hora' ordinal='4' />
+              <column datatype='string' name='g_hora_5' ordinal='5' />
+              <column datatype='string' name='mes_ocu' ordinal='6' />
+              <column datatype='string' name='dia_sem_ocu' ordinal='7' />
+              <column datatype='string' name='depto_ocu' ordinal='8' />
+              <column datatype='string' name='mupio_ocu' ordinal='9' />
+              <column datatype='string' name='zona_ocu' ordinal='10' />
+              <column datatype='string' name='tipo_veh' ordinal='11' />
+              <column datatype='string' name='color_veh' ordinal='12' />
+              <column datatype='string' name='g_modelo_veh' ordinal='13' />
+              <column datatype='string' name='tipo_eve' ordinal='14' />
+              <column datatype='integer' name='ano_archivo' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='textscan.108a8kb0uqrpes11d220h1h3yjwt' name='Fallecidos_2019_2023_diccionario.csv' table='[Fallecidos_2019_2023_diccionario#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='num_corre' ordinal='0' />
+              <column datatype='integer' name='ano_ocu' ordinal='1' />
+              <column datatype='integer' name='dia_ocu' ordinal='2' />
+              <column datatype='integer' name='hora_ocu' ordinal='3' />
+              <column datatype='string' name='g_hora' ordinal='4' />
+              <column datatype='string' name='g_hora_5' ordinal='5' />
+              <column datatype='string' name='mes_ocu' ordinal='6' />
+              <column datatype='string' name='dia_sem_ocu' ordinal='7' />
+              <column datatype='string' name='depto_ocu' ordinal='8' />
+              <column datatype='string' name='mupio_ocu' ordinal='9' />
+              <column datatype='string' name='zona_ocu' ordinal='10' />
+              <column datatype='string' name='sexo_per' ordinal='11' />
+              <column datatype='string' name='edad_per' ordinal='12' />
+              <column datatype='string' name='g_edad_80ymas' ordinal='13' />
+              <column datatype='string' name='g_edad_60ymas' ordinal='14' />
+              <column datatype='string' name='edad_quinquenales' ordinal='15' />
+              <column datatype='string' name='mayor_menor' ordinal='16' />
+              <column datatype='string' name='color_veh' ordinal='17' />
+              <column datatype='string' name='g_modelo_veh' ordinal='18' />
+              <column datatype='string' name='tipo_eve' ordinal='19' />
+              <column datatype='string' name='fall_les' ordinal='20' />
+              <column datatype='string' name='tipo_veh' ordinal='21' />
+              <column datatype='string' name='int_o_noint' ordinal='22' />
+              <column datatype='integer' name='ano_archivo' ordinal='23' />
+            </columns>
+          </relation>
+          <relation connection='textscan.108a8kb0uqrpes11d220h1h3yjwt' name='Vehiculos_2019_2023_diccionario.csv' table='[Vehiculos_2019_2023_diccionario#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='num_corre' ordinal='0' />
+              <column datatype='integer' name='ano_ocu' ordinal='1' />
+              <column datatype='integer' name='dia_ocu' ordinal='2' />
+              <column datatype='integer' name='hora_ocu' ordinal='3' />
+              <column datatype='string' name='g_hora' ordinal='4' />
+              <column datatype='string' name='g_hora_5' ordinal='5' />
+              <column datatype='string' name='mes_ocu' ordinal='6' />
+              <column datatype='string' name='dia_sem_ocu' ordinal='7' />
+              <column datatype='string' name='depto_ocu' ordinal='8' />
+              <column datatype='string' name='mupio_ocu' ordinal='9' />
+              <column datatype='string' name='zona_ocu' ordinal='10' />
+              <column datatype='string' name='sexo_per' ordinal='11' />
+              <column datatype='string' name='edad_per' ordinal='12' />
+              <column datatype='string' name='g_edad_80ymas' ordinal='13' />
+              <column datatype='string' name='g_edad_60ymas' ordinal='14' />
+              <column datatype='string' name='edad_quinquenales' ordinal='15' />
+              <column datatype='string' name='estado_con' ordinal='16' />
+              <column datatype='string' name='mayor_menor' ordinal='17' />
+              <column datatype='string' name='tipo_veh' ordinal='18' />
+              <column datatype='string' name='color_veh' ordinal='19' />
+              <column datatype='string' name='g_modelo_veh' ordinal='20' />
+              <column datatype='string' name='tipo_eve' ordinal='21' />
+              <column datatype='integer' name='ano_archivo' ordinal='22' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[ano_archivo (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[ano_archivo]' />
+          <map key='[ano_archivo (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[ano_archivo]' />
+          <map key='[ano_archivo]' value='[Hechos_2019_2023_diccionario.csv].[ano_archivo]' />
+          <map key='[ano_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[ano_ocu]' />
+          <map key='[ano_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[ano_ocu]' />
+          <map key='[ano_ocu]' value='[Hechos_2019_2023_diccionario.csv].[ano_ocu]' />
+          <map key='[color_veh (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[color_veh]' />
+          <map key='[color_veh (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[color_veh]' />
+          <map key='[color_veh]' value='[Hechos_2019_2023_diccionario.csv].[color_veh]' />
+          <map key='[depto_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[depto_ocu]' />
+          <map key='[depto_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[depto_ocu]' />
+          <map key='[depto_ocu]' value='[Hechos_2019_2023_diccionario.csv].[depto_ocu]' />
+          <map key='[dia_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[dia_ocu]' />
+          <map key='[dia_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[dia_ocu]' />
+          <map key='[dia_ocu]' value='[Hechos_2019_2023_diccionario.csv].[dia_ocu]' />
+          <map key='[dia_sem_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[dia_sem_ocu]' />
+          <map key='[dia_sem_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[dia_sem_ocu]' />
+          <map key='[dia_sem_ocu]' value='[Hechos_2019_2023_diccionario.csv].[dia_sem_ocu]' />
+          <map key='[edad_per (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[edad_per]' />
+          <map key='[edad_per]' value='[Vehiculos_2019_2023_diccionario.csv].[edad_per]' />
+          <map key='[edad_quinquenales (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[edad_quinquenales]' />
+          <map key='[edad_quinquenales]' value='[Vehiculos_2019_2023_diccionario.csv].[edad_quinquenales]' />
+          <map key='[estado_con]' value='[Vehiculos_2019_2023_diccionario.csv].[estado_con]' />
+          <map key='[fall_les]' value='[Fallecidos_2019_2023_diccionario.csv].[fall_les]' />
+          <map key='[g_edad_60ymas (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[g_edad_60ymas]' />
+          <map key='[g_edad_60ymas]' value='[Vehiculos_2019_2023_diccionario.csv].[g_edad_60ymas]' />
+          <map key='[g_edad_80ymas (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[g_edad_80ymas]' />
+          <map key='[g_edad_80ymas]' value='[Vehiculos_2019_2023_diccionario.csv].[g_edad_80ymas]' />
+          <map key='[g_hora (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[g_hora]' />
+          <map key='[g_hora (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[g_hora]' />
+          <map key='[g_hora]' value='[Hechos_2019_2023_diccionario.csv].[g_hora]' />
+          <map key='[g_hora_5 (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[g_hora_5]' />
+          <map key='[g_hora_5 (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[g_hora_5]' />
+          <map key='[g_hora_5]' value='[Hechos_2019_2023_diccionario.csv].[g_hora_5]' />
+          <map key='[g_modelo_veh (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[g_modelo_veh]' />
+          <map key='[g_modelo_veh (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[g_modelo_veh]' />
+          <map key='[g_modelo_veh]' value='[Hechos_2019_2023_diccionario.csv].[g_modelo_veh]' />
+          <map key='[hora_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[hora_ocu]' />
+          <map key='[hora_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[hora_ocu]' />
+          <map key='[hora_ocu]' value='[Hechos_2019_2023_diccionario.csv].[hora_ocu]' />
+          <map key='[int_o_noint]' value='[Fallecidos_2019_2023_diccionario.csv].[int_o_noint]' />
+          <map key='[mayor_menor (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[mayor_menor]' />
+          <map key='[mayor_menor]' value='[Vehiculos_2019_2023_diccionario.csv].[mayor_menor]' />
+          <map key='[mes_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[mes_ocu]' />
+          <map key='[mes_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[mes_ocu]' />
+          <map key='[mes_ocu]' value='[Hechos_2019_2023_diccionario.csv].[mes_ocu]' />
+          <map key='[mupio_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[mupio_ocu]' />
+          <map key='[mupio_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[mupio_ocu]' />
+          <map key='[mupio_ocu]' value='[Hechos_2019_2023_diccionario.csv].[mupio_ocu]' />
+          <map key='[num_corre (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[num_corre]' />
+          <map key='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[num_corre]' />
+          <map key='[num_corre]' value='[Hechos_2019_2023_diccionario.csv].[num_corre]' />
+          <map key='[sexo_per (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[sexo_per]' />
+          <map key='[sexo_per]' value='[Vehiculos_2019_2023_diccionario.csv].[sexo_per]' />
+          <map key='[tipo_eve (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[tipo_eve]' />
+          <map key='[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[tipo_eve]' />
+          <map key='[tipo_eve]' value='[Hechos_2019_2023_diccionario.csv].[tipo_eve]' />
+          <map key='[tipo_veh (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[tipo_veh]' />
+          <map key='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[tipo_veh]' />
+          <map key='[tipo_veh]' value='[Hechos_2019_2023_diccionario.csv].[tipo_veh]' />
+          <map key='[zona_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv].[zona_ocu]' />
+          <map key='[zona_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv].[zona_ocu]' />
+          <map key='[zona_ocu]' value='[Hechos_2019_2023_diccionario.csv].[zona_ocu]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_corre</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_corre]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>num_corre</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ano_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ano_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>ano_ocu</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dia_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>dia_ocu</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hora_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hora_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>hora_ocu</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_hora</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_hora]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_hora</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_hora_5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_hora_5]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_hora_5</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mes_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mes_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mes_ocu</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_sem_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dia_sem_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>dia_sem_ocu</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>depto_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[depto_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>depto_ocu</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mupio_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mupio_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mupio_ocu</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zona_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[zona_ocu]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>zona_ocu</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tipo_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tipo_veh]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>tipo_veh</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_veh]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>color_veh</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_modelo_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_modelo_veh]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_modelo_veh</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tipo_eve</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tipo_eve]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>tipo_eve</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ano_archivo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ano_archivo]</local-name>
+            <parent-name>[Hechos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>ano_archivo</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_corre</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_corre (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>num_corre</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ano_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ano_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>ano_ocu</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dia_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>dia_ocu</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hora_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hora_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>hora_ocu</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_hora</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_hora (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_hora</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_hora_5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_hora_5 (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_hora_5</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mes_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mes_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mes_ocu</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_sem_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dia_sem_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>dia_sem_ocu</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>depto_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[depto_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>depto_ocu</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mupio_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mupio_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mupio_ocu</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zona_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[zona_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>zona_ocu</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sexo_per</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sexo_per (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>sexo_per</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>edad_per</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[edad_per (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>edad_per</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_edad_80ymas</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_edad_80ymas (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_edad_80ymas</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_edad_60ymas</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_edad_60ymas (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_edad_60ymas</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>edad_quinquenales</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[edad_quinquenales (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>edad_quinquenales</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mayor_menor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mayor_menor (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mayor_menor</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_veh (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>color_veh</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_modelo_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_modelo_veh (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_modelo_veh</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tipo_eve</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tipo_eve (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>tipo_eve</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fall_les</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fall_les]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>fall_les</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tipo_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tipo_veh (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>tipo_veh</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>int_o_noint</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[int_o_noint]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>int_o_noint</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ano_archivo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ano_archivo (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Fallecidos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>ano_archivo</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_corre</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_corre (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>num_corre</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ano_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ano_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>ano_ocu</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dia_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>dia_ocu</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hora_ocu</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hora_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>hora_ocu</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_hora</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_hora (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_hora</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_hora_5</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_hora_5 (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_hora_5</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mes_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mes_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mes_ocu</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dia_sem_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dia_sem_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>dia_sem_ocu</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>depto_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[depto_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>depto_ocu</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mupio_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mupio_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mupio_ocu</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zona_ocu</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[zona_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>zona_ocu</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sexo_per</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sexo_per]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>sexo_per</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>edad_per</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[edad_per]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>edad_per</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_edad_80ymas</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_edad_80ymas]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_edad_80ymas</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_edad_60ymas</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_edad_60ymas]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_edad_60ymas</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>edad_quinquenales</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[edad_quinquenales]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>edad_quinquenales</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>estado_con</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[estado_con]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>estado_con</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mayor_menor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[mayor_menor]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>mayor_menor</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tipo_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>tipo_veh</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_veh (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>color_veh</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>g_modelo_veh</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[g_modelo_veh (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>g_modelo_veh</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tipo_eve</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>tipo_eve</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ano_archivo</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ano_archivo (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+            <parent-name>[Vehiculos_2019_2023_diccionario.csv]</parent-name>
+            <remote-alias>ano_archivo</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Fallecidos_2019_2023_diccionario.csv' datatype='table' name='[__tableau_internal_object_id__].[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]' role='measure' type='quantitative' />
+      <column caption='Hechos_2019_2023_diccionario.csv' datatype='table' name='[__tableau_internal_object_id__].[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]' role='measure' type='quantitative' />
+      <column caption='Vehiculos_2019_2023_diccionario.csv' datatype='table' name='[__tableau_internal_object_id__].[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]' role='measure' type='quantitative' />
+      <column caption='ano archivo (Fallecidos 2019 2023 diccionario.csv)' datatype='integer' name='[ano_archivo (Fallecidos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='ano archivo (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[ano_archivo (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='Ano Archivo' datatype='integer' name='[ano_archivo]' role='measure' type='quantitative' />
+      <column caption='ano ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='integer' name='[ano_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='ano ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[ano_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='Ano Ocu' datatype='integer' name='[ano_ocu]' role='measure' type='quantitative' />
+      <column caption='color veh (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[color_veh (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='color veh (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[color_veh (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Color Veh' datatype='string' name='[color_veh]' role='dimension' type='nominal' />
+      <column caption='depto ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[depto_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='depto ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[depto_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Depto Ocu' datatype='string' name='[depto_ocu]' role='dimension' type='nominal' />
+      <column caption='dia ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='integer' name='[dia_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='dia ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[dia_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='Dia Ocu' datatype='integer' name='[dia_ocu]' role='measure' type='quantitative' />
+      <column caption='dia sem ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[dia_sem_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='dia sem ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[dia_sem_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Dia Sem Ocu' datatype='string' name='[dia_sem_ocu]' role='dimension' type='nominal' />
+      <column caption='edad per (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[edad_per (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Edad Per' datatype='string' name='[edad_per]' role='dimension' type='nominal' />
+      <column caption='edad quinquenales (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[edad_quinquenales (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Edad Quinquenales' datatype='string' name='[edad_quinquenales]' role='dimension' type='nominal' />
+      <column caption='Estado Con' datatype='string' name='[estado_con]' role='dimension' type='nominal' />
+      <column caption='Fall Les' datatype='string' name='[fall_les]' role='dimension' type='nominal' />
+      <column caption='g edad 60ymas (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[g_edad_60ymas (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='G Edad 60Ymas' datatype='string' name='[g_edad_60ymas]' role='dimension' type='nominal' />
+      <column caption='g edad 80ymas (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[g_edad_80ymas (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='G Edad 80Ymas' datatype='string' name='[g_edad_80ymas]' role='dimension' type='nominal' />
+      <column caption='g hora (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[g_hora (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='g hora (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[g_hora (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='G Hora' datatype='string' name='[g_hora]' role='dimension' type='nominal' />
+      <column caption='g hora 5 (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[g_hora_5 (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='g hora 5 (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[g_hora_5 (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='G Hora 5' datatype='string' name='[g_hora_5]' role='dimension' type='nominal' />
+      <column caption='g modelo veh (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[g_modelo_veh (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='g modelo veh (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[g_modelo_veh (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='G Modelo Veh' datatype='string' name='[g_modelo_veh]' role='dimension' type='nominal' />
+      <column caption='hora ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='integer' name='[hora_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='hora ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[hora_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='Hora Ocu' datatype='integer' name='[hora_ocu]' role='measure' type='quantitative' />
+      <column caption='Int O Noint' datatype='string' name='[int_o_noint]' role='dimension' type='nominal' />
+      <column caption='mayor menor (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[mayor_menor (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Mayor Menor' datatype='string' name='[mayor_menor]' role='dimension' type='nominal' />
+      <column caption='mes ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[mes_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='mes ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[mes_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Mes Ocu' datatype='string' name='[mes_ocu]' role='dimension' type='nominal' />
+      <column caption='mupio ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[mupio_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='mupio ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[mupio_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Mupio Ocu' datatype='string' name='[mupio_ocu]' role='dimension' type='nominal' />
+      <column caption='num corre (Fallecidos 2019 2023 diccionario.csv)' datatype='integer' name='[num_corre (Fallecidos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='num corre (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+      <column caption='Num Corre' datatype='integer' name='[num_corre]' role='measure' type='quantitative' />
+      <column caption='sexo per (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[sexo_per (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Sexo Per' datatype='string' name='[sexo_per]' role='dimension' type='nominal' />
+      <column caption='tipo eve (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_eve (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='tipo eve (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Tipo Eve' datatype='string' name='[tipo_eve]' role='dimension' type='nominal' />
+      <column caption='tipo veh (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_veh (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='tipo veh (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Tipo Veh' datatype='string' name='[tipo_veh]' role='dimension' type='nominal' />
+      <column caption='zona ocu (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[zona_ocu (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='zona ocu (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[zona_ocu (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+      <column caption='Zona Ocu' datatype='string' name='[zona_ocu]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='es_ES' class='hyper' dbname='Data/TableauTemp/#TableauTemp_1ym21bq1cu7y9i13draxe1vshm1n.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/06/2025 08:52:13 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695' table='[Extract].[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]' type='table' />
+            <relation name='Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD' table='[Extract].[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]' type='table' />
+            <relation name='Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306' table='[Extract].[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]' type='table' />
+          </relation>
+          <cols>
+            <map key='[ano_archivo (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[ano_archivo]' />
+            <map key='[ano_archivo (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[ano_archivo]' />
+            <map key='[ano_archivo]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[ano_archivo]' />
+            <map key='[ano_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[ano_ocu]' />
+            <map key='[ano_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[ano_ocu]' />
+            <map key='[ano_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[ano_ocu]' />
+            <map key='[color_veh (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[color_veh]' />
+            <map key='[color_veh (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[color_veh]' />
+            <map key='[color_veh]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[color_veh]' />
+            <map key='[depto_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[depto_ocu]' />
+            <map key='[depto_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[depto_ocu]' />
+            <map key='[depto_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[depto_ocu]' />
+            <map key='[dia_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[dia_ocu]' />
+            <map key='[dia_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[dia_ocu]' />
+            <map key='[dia_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[dia_ocu]' />
+            <map key='[dia_sem_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[dia_sem_ocu]' />
+            <map key='[dia_sem_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[dia_sem_ocu]' />
+            <map key='[dia_sem_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[dia_sem_ocu]' />
+            <map key='[edad_per (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[edad_per]' />
+            <map key='[edad_per]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[edad_per]' />
+            <map key='[edad_quinquenales (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[edad_quinquenales]' />
+            <map key='[edad_quinquenales]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[edad_quinquenales]' />
+            <map key='[estado_con]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[estado_con]' />
+            <map key='[fall_les]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[fall_les]' />
+            <map key='[g_edad_60ymas (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[g_edad_60ymas]' />
+            <map key='[g_edad_60ymas]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[g_edad_60ymas]' />
+            <map key='[g_edad_80ymas (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[g_edad_80ymas]' />
+            <map key='[g_edad_80ymas]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[g_edad_80ymas]' />
+            <map key='[g_hora (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[g_hora]' />
+            <map key='[g_hora (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[g_hora]' />
+            <map key='[g_hora]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[g_hora]' />
+            <map key='[g_hora_5 (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[g_hora_5]' />
+            <map key='[g_hora_5 (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[g_hora_5]' />
+            <map key='[g_hora_5]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[g_hora_5]' />
+            <map key='[g_modelo_veh (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[g_modelo_veh]' />
+            <map key='[g_modelo_veh (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[g_modelo_veh]' />
+            <map key='[g_modelo_veh]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[g_modelo_veh]' />
+            <map key='[hora_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[hora_ocu]' />
+            <map key='[hora_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[hora_ocu]' />
+            <map key='[hora_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[hora_ocu]' />
+            <map key='[int_o_noint]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[int_o_noint]' />
+            <map key='[mayor_menor (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[mayor_menor]' />
+            <map key='[mayor_menor]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[mayor_menor]' />
+            <map key='[mes_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[mes_ocu]' />
+            <map key='[mes_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[mes_ocu]' />
+            <map key='[mes_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[mes_ocu]' />
+            <map key='[mupio_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[mupio_ocu]' />
+            <map key='[mupio_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[mupio_ocu]' />
+            <map key='[mupio_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[mupio_ocu]' />
+            <map key='[num_corre (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[num_corre]' />
+            <map key='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[num_corre]' />
+            <map key='[num_corre]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[num_corre]' />
+            <map key='[sexo_per (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[sexo_per]' />
+            <map key='[sexo_per]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[sexo_per]' />
+            <map key='[tipo_eve (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[tipo_eve]' />
+            <map key='[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[tipo_eve]' />
+            <map key='[tipo_eve]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[tipo_eve]' />
+            <map key='[tipo_veh (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[tipo_veh]' />
+            <map key='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[tipo_veh]' />
+            <map key='[tipo_veh]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[tipo_veh]' />
+            <map key='[zona_ocu (Fallecidos_2019_2023_diccionario.csv)]' value='[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD].[zona_ocu]' />
+            <map key='[zona_ocu (Vehiculos_2019_2023_diccionario.csv)]' value='[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306].[zona_ocu]' />
+            <map key='[zona_ocu]' value='[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695].[zona_ocu]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>num_corre</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_corre]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>num_corre</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9417</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ano_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ano_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>ano_ocu</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dia_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>dia_ocu</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hora_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hora_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>hora_ocu</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_hora</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_hora]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>g_hora</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_hora_5</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_hora_5]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>g_hora_5</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mes_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mes_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>mes_ocu</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_sem_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dia_sem_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>dia_sem_ocu</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>depto_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[depto_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>depto_ocu</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>33</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mupio_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mupio_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>mupio_ocu</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>665</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zona_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[zona_ocu]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>zona_ocu</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tipo_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tipo_veh]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>tipo_veh</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>27</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>color_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[color_veh]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>color_veh</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_modelo_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_modelo_veh]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>g_modelo_veh</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tipo_eve</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tipo_eve]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>tipo_eve</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ano_archivo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ano_archivo]</local-name>
+              <parent-name>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</parent-name>
+              <remote-alias>ano_archivo</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Hechos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_corre</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_corre (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>num_corre</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13991</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ano_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ano_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>ano_ocu</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dia_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>dia_ocu</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hora_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hora_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>hora_ocu</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_hora</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_hora (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>g_hora</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_hora_5</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_hora_5 (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>g_hora_5</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mes_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mes_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>mes_ocu</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_sem_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dia_sem_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>dia_sem_ocu</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>depto_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[depto_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>depto_ocu</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mupio_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mupio_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>mupio_ocu</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>643</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zona_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[zona_ocu (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>zona_ocu</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>38</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sexo_per</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sexo_per (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>sexo_per</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>edad_per</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[edad_per (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>edad_per</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>141</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_edad_80ymas</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_edad_80ymas (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>g_edad_80ymas</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_edad_60ymas</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_edad_60ymas (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>g_edad_60ymas</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>edad_quinquenales</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[edad_quinquenales (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>edad_quinquenales</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mayor_menor</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mayor_menor (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>mayor_menor</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>color_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[color_veh (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>color_veh</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_modelo_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_modelo_veh (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>g_modelo_veh</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tipo_eve</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tipo_eve (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>tipo_eve</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fall_les</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[fall_les]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>fall_les</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tipo_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tipo_veh (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>tipo_veh</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>int_o_noint</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[int_o_noint]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>int_o_noint</remote-alias>
+              <ordinal>38</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ano_archivo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ano_archivo (Fallecidos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</parent-name>
+              <remote-alias>ano_archivo</remote-alias>
+              <ordinal>39</ordinal>
+              <family>Fallecidos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_corre</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_corre (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>num_corre</remote-alias>
+              <ordinal>40</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16966</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ano_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ano_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>ano_ocu</remote-alias>
+              <ordinal>41</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[dia_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>dia_ocu</remote-alias>
+              <ordinal>42</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hora_ocu</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hora_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>hora_ocu</remote-alias>
+              <ordinal>43</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_hora</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_hora (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>g_hora</remote-alias>
+              <ordinal>44</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_hora_5</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_hora_5 (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>g_hora_5</remote-alias>
+              <ordinal>45</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mes_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mes_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>mes_ocu</remote-alias>
+              <ordinal>46</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dia_sem_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[dia_sem_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>dia_sem_ocu</remote-alias>
+              <ordinal>47</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>depto_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[depto_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>depto_ocu</remote-alias>
+              <ordinal>48</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>28</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mupio_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mupio_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>mupio_ocu</remote-alias>
+              <ordinal>49</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>562</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>zona_ocu</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[zona_ocu (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>zona_ocu</remote-alias>
+              <ordinal>50</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sexo_per</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sexo_per]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>sexo_per</remote-alias>
+              <ordinal>51</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>edad_per</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[edad_per]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>edad_per</remote-alias>
+              <ordinal>52</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>111</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_edad_80ymas</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_edad_80ymas]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>g_edad_80ymas</remote-alias>
+              <ordinal>53</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_edad_60ymas</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_edad_60ymas]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>g_edad_60ymas</remote-alias>
+              <ordinal>54</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>edad_quinquenales</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[edad_quinquenales]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>edad_quinquenales</remote-alias>
+              <ordinal>55</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>estado_con</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[estado_con]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>estado_con</remote-alias>
+              <ordinal>56</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mayor_menor</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[mayor_menor]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>mayor_menor</remote-alias>
+              <ordinal>57</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tipo_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>tipo_veh</remote-alias>
+              <ordinal>58</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>35</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>color_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[color_veh (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>color_veh</remote-alias>
+              <ordinal>59</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>g_modelo_veh</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[g_modelo_veh (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>g_modelo_veh</remote-alias>
+              <ordinal>60</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tipo_eve</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>tipo_eve</remote-alias>
+              <ordinal>61</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ano_archivo</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ano_archivo (Vehiculos_2019_2023_diccionario.csv)]</local-name>
+              <parent-name>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</parent-name>
+              <remote-alias>ano_archivo</remote-alias>
+              <ordinal>62</ordinal>
+              <family>Vehiculos_2019_2023_diccionario.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Guatemala&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Fallecidos_2019_2023_diccionario.csv' id='Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD'>
+            <properties context=''>
+              <relation connection='textscan.108a8kb0uqrpes11d220h1h3yjwt' name='Fallecidos_2019_2023_diccionario.csv' table='[Fallecidos_2019_2023_diccionario#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='num_corre' ordinal='0' />
+                  <column datatype='integer' name='ano_ocu' ordinal='1' />
+                  <column datatype='integer' name='dia_ocu' ordinal='2' />
+                  <column datatype='integer' name='hora_ocu' ordinal='3' />
+                  <column datatype='string' name='g_hora' ordinal='4' />
+                  <column datatype='string' name='g_hora_5' ordinal='5' />
+                  <column datatype='string' name='mes_ocu' ordinal='6' />
+                  <column datatype='string' name='dia_sem_ocu' ordinal='7' />
+                  <column datatype='string' name='depto_ocu' ordinal='8' />
+                  <column datatype='string' name='mupio_ocu' ordinal='9' />
+                  <column datatype='string' name='zona_ocu' ordinal='10' />
+                  <column datatype='string' name='sexo_per' ordinal='11' />
+                  <column datatype='string' name='edad_per' ordinal='12' />
+                  <column datatype='string' name='g_edad_80ymas' ordinal='13' />
+                  <column datatype='string' name='g_edad_60ymas' ordinal='14' />
+                  <column datatype='string' name='edad_quinquenales' ordinal='15' />
+                  <column datatype='string' name='mayor_menor' ordinal='16' />
+                  <column datatype='string' name='color_veh' ordinal='17' />
+                  <column datatype='string' name='g_modelo_veh' ordinal='18' />
+                  <column datatype='string' name='tipo_eve' ordinal='19' />
+                  <column datatype='string' name='fall_les' ordinal='20' />
+                  <column datatype='string' name='tipo_veh' ordinal='21' />
+                  <column datatype='string' name='int_o_noint' ordinal='22' />
+                  <column datatype='integer' name='ano_archivo' ordinal='23' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD' table='[Extract].[Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD]' type='table' />
+            </properties>
+          </object>
+          <object caption='Hechos_2019_2023_diccionario.csv' id='Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695'>
+            <properties context=''>
+              <relation connection='textscan.0uv1rhu19krw8n12puftw0eoam47' name='Hechos_2019_2023_diccionario.csv' table='[Hechos_2019_2023_diccionario#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='num_corre' ordinal='0' />
+                  <column datatype='integer' name='ano_ocu' ordinal='1' />
+                  <column datatype='integer' name='dia_ocu' ordinal='2' />
+                  <column datatype='integer' name='hora_ocu' ordinal='3' />
+                  <column datatype='string' name='g_hora' ordinal='4' />
+                  <column datatype='string' name='g_hora_5' ordinal='5' />
+                  <column datatype='string' name='mes_ocu' ordinal='6' />
+                  <column datatype='string' name='dia_sem_ocu' ordinal='7' />
+                  <column datatype='string' name='depto_ocu' ordinal='8' />
+                  <column datatype='string' name='mupio_ocu' ordinal='9' />
+                  <column datatype='string' name='zona_ocu' ordinal='10' />
+                  <column datatype='string' name='tipo_veh' ordinal='11' />
+                  <column datatype='string' name='color_veh' ordinal='12' />
+                  <column datatype='string' name='g_modelo_veh' ordinal='13' />
+                  <column datatype='string' name='tipo_eve' ordinal='14' />
+                  <column datatype='integer' name='ano_archivo' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695' table='[Extract].[Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695]' type='table' />
+            </properties>
+          </object>
+          <object caption='Vehiculos_2019_2023_diccionario.csv' id='Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306'>
+            <properties context=''>
+              <relation connection='textscan.108a8kb0uqrpes11d220h1h3yjwt' name='Vehiculos_2019_2023_diccionario.csv' table='[Vehiculos_2019_2023_diccionario#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='num_corre' ordinal='0' />
+                  <column datatype='integer' name='ano_ocu' ordinal='1' />
+                  <column datatype='integer' name='dia_ocu' ordinal='2' />
+                  <column datatype='integer' name='hora_ocu' ordinal='3' />
+                  <column datatype='string' name='g_hora' ordinal='4' />
+                  <column datatype='string' name='g_hora_5' ordinal='5' />
+                  <column datatype='string' name='mes_ocu' ordinal='6' />
+                  <column datatype='string' name='dia_sem_ocu' ordinal='7' />
+                  <column datatype='string' name='depto_ocu' ordinal='8' />
+                  <column datatype='string' name='mupio_ocu' ordinal='9' />
+                  <column datatype='string' name='zona_ocu' ordinal='10' />
+                  <column datatype='string' name='sexo_per' ordinal='11' />
+                  <column datatype='string' name='edad_per' ordinal='12' />
+                  <column datatype='string' name='g_edad_80ymas' ordinal='13' />
+                  <column datatype='string' name='g_edad_60ymas' ordinal='14' />
+                  <column datatype='string' name='edad_quinquenales' ordinal='15' />
+                  <column datatype='string' name='estado_con' ordinal='16' />
+                  <column datatype='string' name='mayor_menor' ordinal='17' />
+                  <column datatype='string' name='tipo_veh' ordinal='18' />
+                  <column datatype='string' name='color_veh' ordinal='19' />
+                  <column datatype='string' name='g_modelo_veh' ordinal='20' />
+                  <column datatype='string' name='tipo_eve' ordinal='21' />
+                  <column datatype='integer' name='ano_archivo' ordinal='22' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306' table='[Extract].[Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[num_corre]' />
+              <expression op='[num_corre (Fallecidos_2019_2023_diccionario.csv)]' />
+            </expression>
+            <first-end-point object-id='Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695' />
+            <second-end-point object-id='Fallecidos_2019_2023_diccionario.csv_97657E41082A4482AF02ED36DA1462CD' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[num_corre]' />
+              <expression op='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' />
+            </expression>
+            <first-end-point object-id='Hechos_2019_2023_diccionario.csv_09C8D906A3BB43789E16AAD833247695' />
+            <second-end-point object-id='Vehiculos_2019_2023_diccionario.csv_1B81AC9B3EC443D3918F8656C97A0306' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filtrar tipos de vehículo por evento' name='[Action1_3DEF35F91F3D41838FC7BE5CBEE69898]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Tipos de vehiculo' />
+      <command command='tsc:tsl-filter'>
+        <param name='exclude' value='Numero de fallecidos por edad,Casos por departamento,Tipos de vehiculo' />
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Casos por departamento'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Accidentes por departamento</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hechos_2019_2023_diccionario' name='federated.14455c80plmio61ehiwja04vz80x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14455c80plmio61ehiwja04vz80x'>
+            <column-instance column='[num_corre]' derivation='Count' name='[cnt:num_corre:qk]' pivot='key' type='quantitative' />
+            <column caption='Depto Ocu' datatype='string' name='[depto_ocu]' role='dimension' type='nominal' />
+            <column-instance column='[depto_ocu]' derivation='None' name='[none:depto_ocu:nk]' pivot='key' type='nominal' />
+            <column caption='Num Corre' datatype='integer' name='[num_corre]' role='measure' type='quantitative' />
+            <column-instance column='[num_corre]' derivation='Sum' name='[sum:num_corre:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14455c80plmio61ehiwja04vz80x].[none:depto_ocu:nk]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([num_corre])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:depto_ocu:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.14455c80plmio61ehiwja04vz80x].[none:depto_ocu:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.14455c80plmio61ehiwja04vz80x].[sum:num_corre:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.14455c80plmio61ehiwja04vz80x].[none:depto_ocu:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre:qk]' scope='rows' value='Numero de Casos' />
+            <format attr='height' field='[federated.14455c80plmio61ehiwja04vz80x].[none:depto_ocu:nk]' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#000000' />
+                <format attr='mark-transparency' value='226' />
+                <format attr='size' value='1.5272375345230103' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='182' />
+                <format attr='maxheight' value='182' />
+                <format attr='minwidth' value='666' />
+                <format attr='maxwidth' value='666' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre:qk]</rows>
+        <cols>[federated.14455c80plmio61ehiwja04vz80x].[none:depto_ocu:nk]</cols>
+      </table>
+      <simple-id uuid='{30CC4017-73E2-4288-A55E-37D4CCAF171A}' />
+    </worksheet>
+    <worksheet name='Numero de fallecidos por edad'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Numero de fallecidos por edad&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hechos_2019_2023_diccionario' name='federated.14455c80plmio61ehiwja04vz80x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14455c80plmio61ehiwja04vz80x'>
+            <column-instance column='[num_corre (Fallecidos_2019_2023_diccionario.csv)]' derivation='Count' name='[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='edad per (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[edad_per (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+            <column-instance column='[edad_per (Fallecidos_2019_2023_diccionario.csv)]' derivation='None' name='[none:edad_per (Fallecidos_2019_2023_diccionario.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[sexo_per (Fallecidos_2019_2023_diccionario.csv)]' derivation='None' name='[none:sexo_per (Fallecidos_2019_2023_diccionario.csv):nk]' pivot='key' type='nominal' />
+            <column caption='num corre (Fallecidos 2019 2023 diccionario.csv)' datatype='integer' name='[num_corre (Fallecidos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+            <column caption='sexo per (Fallecidos 2019 2023 diccionario.csv)' datatype='string' name='[sexo_per (Fallecidos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.14455c80plmio61ehiwja04vz80x].[none:edad_per (Fallecidos_2019_2023_diccionario.csv):nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]' scope='rows' value='Numero de Fallecidos' />
+            <encoding attr='space' class='0' field='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]' field-type='quantitative' max='2500' min='0' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.14455c80plmio61ehiwja04vz80x].[none:sexo_per (Fallecidos_2019_2023_diccionario.csv):nk]' value='149' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.14455c80plmio61ehiwja04vz80x].[none:sexo_per (Fallecidos_2019_2023_diccionario.csv):nk]' />
+              <lod column='[federated.14455c80plmio61ehiwja04vz80x].[none:sexo_per (Fallecidos_2019_2023_diccionario.csv):nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Fallecidos_2019_2023_diccionario.csv):qk]</rows>
+        <cols>[federated.14455c80plmio61ehiwja04vz80x].[none:edad_per (Fallecidos_2019_2023_diccionario.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{5ED417E1-327A-4F9E-AE11-8675910D1D62}' />
+    </worksheet>
+    <worksheet name='Tipos de vehiculo'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 tipos de vehiculos accidentados
+</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hechos_2019_2023_diccionario' name='federated.14455c80plmio61ehiwja04vz80x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14455c80plmio61ehiwja04vz80x'>
+            <column-instance column='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' derivation='Count' name='[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' derivation='None' name='[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]' pivot='key' type='nominal' />
+            <column caption='num corre (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+            <column caption='tipo veh (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' included-values='in-range' />
+          <filter class='categorical' column='[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([num_corre (Vehiculos_2019_2023_diccionario.csv)])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]</column>
+            <column>[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' scope='rows' value='Numero de accidentes' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]' value='113' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]</rows>
+        <cols>[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{CA92A767-5C38-4557-83E8-E6E235F4D60C}' />
+    </worksheet>
+    <worksheet name='Tipos de vehiculo por evento'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Tipos de vehiculo por evento&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Hechos_2019_2023_diccionario' name='federated.14455c80plmio61ehiwja04vz80x' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14455c80plmio61ehiwja04vz80x'>
+            <column-instance column='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' derivation='Count' name='[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]' derivation='None' name='[none:tipo_eve (Vehiculos_2019_2023_diccionario.csv):nk]' pivot='key' type='nominal' />
+            <column-instance column='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' derivation='None' name='[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]' pivot='key' type='nominal' />
+            <column caption='num corre (Vehiculos 2019 2023 diccionario.csv)' datatype='integer' name='[num_corre (Vehiculos_2019_2023_diccionario.csv)]' role='measure' type='quantitative' />
+            <column caption='tipo eve (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_eve (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+            <column caption='tipo veh (Vehiculos 2019 2023 diccionario.csv)' datatype='string' name='[tipo_veh (Vehiculos_2019_2023_diccionario.csv)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_eve (Vehiculos_2019_2023_diccionario.csv):nk]' value='111' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_veh (Vehiculos_2019_2023_diccionario.csv):nk]</rows>
+        <cols>[federated.14455c80plmio61ehiwja04vz80x].[none:tipo_eve (Vehiculos_2019_2023_diccionario.csv):nk]</cols>
+      </table>
+      <simple-id uuid='{B3EEE650-0B0B-4D47-8348-A1EDFE314794}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='1520' minheight='760' minwidth='1520' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97894' id='15' param='horz' type-v2='layout-flow' w='62303' x='526' y='1053'>
+            <zone h='97894' id='13' type-v2='layout-basic' w='62303' x='526' y='1053'>
+              <zone h='97894' id='3' param='vert' type-v2='layout-flow' w='31152' x='526' y='1053'>
+                <zone h='97894' id='5' param='vert' type-v2='layout-flow' w='31152' x='526' y='1053'>
+                  <zone h='50197' id='6' name='Tipos de vehiculo' w='31152' x='526' y='1053'>
+                    <layout-cache minheight='203' type-h='scalable' type-w='fixed' />
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='47697' id='7' param='vert' type-v2='layout-flow' w='31152' x='526' y='51250'>
+                    <zone h='47697' id='9' name='Numero de fallecidos por edad' w='31152' x='526' y='51250'>
+                      <layout-cache minheight='184' type-h='scalable' type-w='fixed' />
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='97894' id='8' param='vert' type-v2='layout-flow' w='31151' x='31678' y='1053'>
+                <zone fixed-size='704' h='93685' id='11' is-fixed='true' name='Casos por departamento' w='31151' x='31678' y='1053'>
+                  <layout-cache has-max-size-h='true' maxheight='269' minheight='269' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone fixed-size='435' h='97894' id='12' is-fixed='true' name='Tipos de vehiculo por evento' w='36645' x='62829' y='1053'>
+            <layout-cache type-h='fixed' type-w='fixed' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1200' minheight='1200' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='17' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='97894' id='16' param='vert' type-v2='layout-flow' w='98948' x='526' y='1053'>
+                <zone fixed-size='280' h='52434' id='6' is-fixed='true' name='Tipos de vehiculo' w='31152' x='526' y='1053'>
+                  <layout-cache minheight='259' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='93685' id='11' is-fixed='true' name='Casos por departamento' w='31151' x='31678' y='1053'>
+                  <layout-cache has-max-size-h='true' maxheight='269' minheight='269' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='97894' id='12' is-fixed='true' name='Tipos de vehiculo por evento' w='36645' x='62829' y='1053'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='45460' id='9' is-fixed='true' name='Numero de fallecidos por edad' w='31152' x='526' y='53487'>
+                  <layout-cache minheight='206' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{AA578968-B47C-4E99-B9AA-AC2F9D8A9C06}' />
+    </dashboard>
+  </dashboards>
+  <windows show-side-pane='false' source-height='44'>
+    <window class='worksheet' name='Casos por departamento'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{995EA8F0-2150-436B-93C4-9AEE390ABFFA}' />
+    </window>
+    <window class='worksheet' name='Tipos de vehiculo'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{52AE5315-CF01-42AA-A5FB-E3653D17177D}' />
+    </window>
+    <window class='worksheet' name='Numero de fallecidos por edad'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card pane-specification-id='0' param='[federated.14455c80plmio61ehiwja04vz80x].[none:sexo_per (Fallecidos_2019_2023_diccionario.csv):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{65855A61-4CD5-49DC-8EF3-96902F2679BE}' />
+    </window>
+    <window class='worksheet' name='Tipos de vehiculo por evento'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='174'>
+            <card pane-specification-id='0' param='[federated.14455c80plmio61ehiwja04vz80x].[cnt:num_corre (Vehiculos_2019_2023_diccionario.csv):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EBAD2604-3638-4F37-BE87-1765E59C6090}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Casos por departamento'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Numero de fallecidos por edad'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tipos de vehiculo'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tipos de vehiculo por evento' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{0C0BC8F1-3D22-4E80-B604-D829DE4A6D59}' />
+    </window>
+  </windows>
+</workbook>
